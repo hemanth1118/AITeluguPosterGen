@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telugu Poster Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif; /* A nice default sans-serif font */
+      margin: 0; /* Ensure no default margin */
+      height: 100vh; /* Make body take full viewport height */
+      overflow: hidden; /* Prevent body scroll, App will manage internal scroll */
+    }
+    /* Adding a fallback font for Telugu characters if system fonts are insufficient */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap');
+    /* Import Montserrat for the main header */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+    .telugu-text-display { /* Example class if specific Telugu font styling is needed */
+        font-family: 'Noto Sans Telugu', sans-serif;
+    }
+    .header-font-3d {
+      font-family: 'Montserrat', sans-serif; /* Changed to Montserrat */
+      font-weight: 800; /* Use a bold weight for Montserrat */
+      /* Further Reduced 3D effect */
+      text-shadow: 
+        1px 1px 2px rgba(0,0,0,0.12); /* More subtle shadow */
+    }
+    .sub-header-3d {
+      /* Even more Subtle 3D effect for sub-header */
+      text-shadow: 
+        0.5px 0.5px 1px rgba(0,0,0,0.07); /* Very subtle shadow */
+    }
+    .sidebar-brand-text {
+      font-weight: 700; /* bold */
+      color: white;
+      /* 3D effect for dark background */
+      text-shadow: 
+        1px 1px 0px rgba(0,0,0,0.2), 
+        1.5px 1.5px 0px rgba(0,0,0,0.15), 
+        2px 2px 0px rgba(0,0,0,0.1);
+      font-size: 1.2rem; /* Slightly larger and distinct */
+      letter-spacing: 0.025em;
+    }
+    /* Custom scrollbar for webkit browsers */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(129, 140, 248, 0.6); /* Indigo-400 with opacity */
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(107, 114, 245, 0.8); /* Indigo-500 with opacity */
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.4.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root" class="h-full"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
